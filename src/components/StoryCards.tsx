@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Clock, ArrowRight } from 'lucide-react'
+import { Clock } from 'lucide-react'
 import { stories } from '../data/content'
 import type { Story } from '../data/content'
 
@@ -64,21 +64,29 @@ export default function StoryCards() {
                   }
                 }}
               >
-                <div className="flex items-center gap-2 mb-3">
+                <div className="flex items-center gap-2 mb-3 flex-wrap">
                   <span
                     className="text-xs px-2 py-0.5 rounded-full font-medium"
                     style={{ background: style.bg, color: style.text }}
                   >
                     {style.label}
                   </span>
-                  {story.featured && (
+                  {story.reporting && (
+                    <span className="text-xs" style={{ color: 'var(--color-gold)' }}>
+                      Reporting
+                    </span>
+                  )}
+                  {story.featured && !story.reporting && (
                     <span className="text-xs" style={{ color: 'var(--color-gold)' }}>
                       Featured
                     </span>
                   )}
-                  <span className="text-xs ml-auto flex items-center gap-1" style={{ color: 'var(--color-mist)' }}>
-                    <Clock className="w-3 h-3" />
-                    {story.readTime}
+                  <span className="text-xs ml-auto flex items-center gap-2" style={{ color: 'var(--color-mist)' }}>
+                    <span>{story.date}</span>
+                    <span className="flex items-center gap-1">
+                      <Clock className="w-3 h-3" />
+                      {story.readTime}
+                    </span>
                   </span>
                 </div>
 
@@ -94,13 +102,24 @@ export default function StoryCards() {
                       exit={{ height: 0, opacity: 0 }}
                       className="overflow-hidden"
                     >
-                      <p className="text-sm mt-3" style={{ color: 'var(--color-mist)' }}>
-                        {story.excerpt}
-                      </p>
-                      <div className="flex items-center gap-2 mt-4 text-sm" style={{ color: 'var(--color-aurora)' }}>
-                        <span>Read more</span>
-                        <ArrowRight className="w-4 h-4" />
-                      </div>
+                      {story.body ? (
+                        <div className="mt-3 space-y-3">
+                          {story.body.map((paragraph) => (
+                            <p key={paragraph} className="text-sm" style={{ color: 'var(--color-mist)' }}>
+                              {paragraph}
+                            </p>
+                          ))}
+                        </div>
+                      ) : (
+                        <p className="text-sm mt-3" style={{ color: 'var(--color-mist)' }}>
+                          {story.excerpt}
+                        </p>
+                      )}
+                      {story.reporting && (
+                        <p className="text-xs mt-4" style={{ color: 'var(--color-gold)' }}>
+                          Open through the fall and winter
+                        </p>
+                      )}
                     </motion.div>
                   )}
                 </AnimatePresence>

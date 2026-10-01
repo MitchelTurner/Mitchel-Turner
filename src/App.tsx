@@ -61,7 +61,7 @@ export default function App() {
             className="font-mono text-sm tracking-widest uppercase mb-4"
             style={{ color: 'var(--color-aurora)' }}
           >
-            Ketchikan, Alaska
+            Fall & winter · Ketchikan, Alaska
           </p>
 
           <h1 className="font-serif text-5xl md:text-7xl text-white leading-tight mb-6">
@@ -70,7 +70,8 @@ export default function App() {
           </h1>
 
           <p className="text-lg md:text-xl max-w-xl mx-auto mb-4" style={{ color: 'var(--color-mist)' }}>
-            Local reporting on politics, community, and the issues that shape life on the island.
+            Back on the beat for the fall and winter. The season starts with the Southeast
+            Conference — timber, mining, new investment, the election, and mariculture.
           </p>
 
           <HeadlineTicker />
@@ -162,6 +163,11 @@ export default function App() {
                 a story. Their reaction grows something, maybe even connects a dot or two. I think
                 that's about all I'm up to.
               </p>
+              <p>
+                I'm back to reporting for the fall and winter. The Southeast Conference just met
+                here in Ketchikan, at the Ted Ferry Civic Center. Timber, mining, new investment,
+                the election, and mariculture — that's the list I'm working.
+              </p>
             </motion.div>
           </div>
         </div>
@@ -182,7 +188,7 @@ export default function App() {
       {/* Stories */}
       <section id="stories" className="section-padding" style={{ background: 'rgba(26, 58, 74, 0.15)' }}>
         <div className="max-w-6xl mx-auto">
-          <SectionTitle subtitle="Politics, community, investigations, and maritime">
+          <SectionTitle subtitle="From the summit at Ted Ferry, and what I'm following after it">
             Latest Coverage
           </SectionTitle>
           <StoryCards />

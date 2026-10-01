@@ -36,7 +36,7 @@ export default function PublicMeetings() {
               <div className="flex-1 min-w-0">
                 <h3 className="font-semibold text-white">{meeting.body}</h3>
                 <p className="text-sm truncate" style={{ color: 'var(--color-mist)' }}>
-                  {meeting.schedule} · Next: {meeting.nextDate}
+                  {meeting.schedule} · {meeting.when ?? `Next: ${meeting.nextDate}`}
                 </p>
               </div>
 
