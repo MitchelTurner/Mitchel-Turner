@@ -1,3 +1,4 @@
+import Conference from './components/Conference'
 import Connect from './components/Connect'
 import { FacebookIcon, InstagramIcon } from './components/Icons'
 import { FACEBOOK_URL, INSTAGRAM_URL, status } from './data/site'
@@ -37,6 +38,8 @@ export default function App() {
             <span className="back">{status.back}</span>
           </p>
         </div>
+
+        <Conference />
 
         <section className="block" id="about">
           <h2 className="label">About</h2>
