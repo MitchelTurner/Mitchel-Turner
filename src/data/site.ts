@@ -47,5 +47,5 @@ export const conferenceEvents: ConferenceEvent[] = [
 
 export const INSTAGRAM_URL = 'https://instagram.com/realmitchelturner'
 export const FACEBOOK_URL = 'https://facebook.com/realmitchelturner'
-export const PHONE_DISPLAY = '+1 808 208 2842'
-export const PHONE_TEL = 'tel:+18082082842'
+export const PHONE_DISPLAY = '+1 907 617 5774'
+export const PHONE_TEL = 'tel:+19076175774'
