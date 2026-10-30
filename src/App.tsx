@@ -93,13 +93,12 @@ export default function App() {
           <div className="prose">
             <p>
               I serve on the Ketchikan Gateway Borough Planning Commission. While I&apos;m an active
-              member, I can make content, videos, and comments on topics related to the commission,
-              and on anything else I might vote on.
+              member, I will not comment on topics related to the commission, or on anything else I
+              might vote on.
             </p>
             <p>
-              That work is mine. It isn&apos;t a statement from the commission. I still like keeping
-              people informed about what&apos;s going on in town, including the subjects that show up
-              on an agenda.
+              No content, no videos, and no comments on those subjects. I still like keeping people
+              informed about the rest of what&apos;s going on in town.
             </p>
           </div>
         </section>
